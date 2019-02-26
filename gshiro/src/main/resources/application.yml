@@ -1,0 +1,32 @@
+spring:
+  #DataSource
+  datasource:
+    name: druidDataSource
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #ÌÚÑ¶ÔÆCDB
+    url: jdbc:mysql://cdb-hm8x3x5u.bj.tencentcdb.com:10058/shiro?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&useSSL=false
+    username: groad
+    password: groad1218
+    druid:
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      filters: stat,wall,log4j2,config
+      initialSize: 5
+      maxActive: 100
+      maxPoolPreparedStatementPerConnectionSize: 20
+      maxWait: 60000
+      minEvictableIdleTimeMillis: 300000
+      minIdle: 5
+      poolPreparedStatements: true
+      testOnBorrow: true
+      testOnReturn: false
+      testWhileIdle: true
+      timeBetweenEvictionRunsMillis: 60000
+      useGlobalDataSourceStat: true
+      validationQuery: SELECT 'x'
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+mybatis:
+  type-aliases-package: me.groad.entity
+  mapper-locations: classpath*:me.groad.mapper/*.xml
