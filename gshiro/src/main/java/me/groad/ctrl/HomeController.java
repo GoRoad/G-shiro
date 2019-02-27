@@ -2,7 +2,6 @@ package me.groad.ctrl;
 
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -34,6 +33,7 @@ public class HomeController
         // 登录失败从request中获取shiro处理的异常信息。
         // shiroLoginFailure:就是shiro异常类的全类名.
         Object exception = request.getAttribute("shiroLoginFailure");
+        System.out.println(exception);
         String msg = "";
         if (exception != null)
         {

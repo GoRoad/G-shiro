@@ -6,8 +6,8 @@
     <select id="findRoleByUsername" resultType="me.groad.entity.SysRole">
           SELECT
             user_info.user_id,
-            user_info.`name`,
-            user_info.`password`,
+            user_info.name,
+            user_info.password,
             user_info.salt,
             user_info.state,
             user_info.username,

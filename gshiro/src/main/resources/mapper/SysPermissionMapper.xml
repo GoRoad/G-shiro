@@ -10,7 +10,7 @@
             sys_role.available,
             sys_role.description,
             sys_role.role,
-            sys_permission.`name`,
+            sys_permission.name,
             sys_permission.permission,
             sys_permission.url
         FROM
